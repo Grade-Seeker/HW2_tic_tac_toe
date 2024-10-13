@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-page">
+    <h2>Enter your username</h2>
+    <input type="text" id="username" placeholder="Username">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Homepage -->
+  <div id="homepage" style="display: none;">
+    <h1>Welcome, <span id="player-name"></span></h1>
+    <p>Wins: <span id="wins">0</span></p>
+    <p>Win Rate: <span id="win-rate">0%</span></p>
+    <button id="match-button" onclick="startMatch()">Match Making</button>
+    <p id="match-status"></p>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-page" style="display: none;">
+    <h2>Tic-Tac-Toe</h2>
+    <p>Player 1: <span id="player1-name"></span></p>
+    <p>Player 2: NPC</p>
+    <p id="game-status">Your Turn</p>
+    <div class="grid-container">
+      <div class="grid-item" onclick="playerMove(0)"></div>
+      <div class="grid-item" onclick="playerMove(1)"></div>
+      <div class="grid-item" onclick="playerMove(2)"></div>
+      <div class="grid-item" onclick="playerMove(3)"></div>
+      <div class="grid-item" onclick="playerMove(4)"></div>
+      <div class="grid-item" onclick="playerMove(5)"></div>
+      <div class="grid-item" onclick="playerMove(6)"></div>
+      <div class="grid-item" onclick="playerMove(7)"></div>
+      <div class="grid-item" onclick="playerMove(8)"></div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
